@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { whatsappUrl } from "@/lib/contact";
 
 export default function Hero() {
   return (
@@ -87,7 +88,10 @@ export default function Hero() {
           </p>
 
 
-          <button
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="
             mt-3 md:mt-10
             self-start
@@ -109,7 +113,7 @@ export default function Hero() {
             "
           >
             Solicitar orçamento
-          </button>
+          </a>
 
 
           <div

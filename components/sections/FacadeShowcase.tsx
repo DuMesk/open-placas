@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./FacadeShowcase.module.css";
+import { whatsappUrl } from "@/lib/contact";
 
 const highlights = [
   { title: "Design personalizado", description: "Projetos exclusivos para sua marca." },
@@ -9,7 +10,7 @@ const highlights = [
 
 export default function FacadeShowcase() {
   return (
-    <section className={styles.section} aria-labelledby="facade-heading">
+    <section id="fachadas" className={styles.section} aria-labelledby="facade-heading">
       <div className={styles.layout}>
         <div className={styles.heading}>
           <p className={styles.eyebrow}>FACHADAS COMERCIAIS</p>
@@ -41,9 +42,9 @@ export default function FacadeShowcase() {
               </li>
             ))}
           </ul>
-          <button type="button" className={styles.button}>
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className={styles.button}>
             Solicitar projeto de fachada
-          </button>
+          </a>
         </div>
       </div>
     </section>
