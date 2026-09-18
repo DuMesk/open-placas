@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 // O domínio oficial pode ser sobrescrito no ambiente antes do build.
 const configuredUrl = process.env.SITE_URL?.trim();
-export const siteUrl = new URL(configuredUrl || "https://openplacas.com.br");
+export const siteUrl = new URL(configuredUrl || "https://www.openplacas.com.br");
 
 if (!["http:", "https:"].includes(siteUrl.protocol) || siteUrl.pathname !== "/" || siteUrl.search || siteUrl.hash || siteUrl.username || siteUrl.password) {
   throw new Error("SITE_URL deve conter apenas a origem do site, como https://www.exemplo.com.br.");
